@@ -1,38 +1,11 @@
-import { useState } from "react";
+import { ButtonHTMLAttributes } from "react";
 
-type ButtonProps = {
-    /** ? = propriedade (argumento) opcional. */
-    text?: string;
-    // text?: number;
+import "../styles/button.scss";
 
-    /** generic ou parametização da tipagem. Ou "string[]". */
-    // text?: Array<string>;
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-    /** Propriedade em que todo componente tem acesso: "children". */
-    // children?: string;
-}
-
-/** Named Export */
 export function Button(props: ButtonProps) {
-
-    // let counter = 0;
-    /** Estado */
-    const [counter, setCounter] = useState(0);
-
-    function increment() {
-        // counter += 1;
-        setCounter(counter + 1);
-        // console.log(counter);
-    }
-
     return (
-        // <button>{props.text || "Default"}</button>
-
-        /** Propriedade em que todo componente tem acesso: "children". */
-        // <button>{props.children || "Children"}</button>
-
-        <button onClick={increment}>{counter}</button>
+        <button className="button" {...props} /> /** spread (...) distribui todas as propriedades para o botão. */
     );
 }
-
-// export default Button;
