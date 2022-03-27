@@ -32,6 +32,9 @@
 `firebase deploy`
 
 <br>
+
+[Deployment no Firebase](https://create-react-app.dev/docs/deployment#firebase)
+
 <br>
 
 [Mission ReactJS](https://www.notion.so/Mission-ReactJS-f01ae1ba0f8148ad8f1defbf990be484)
